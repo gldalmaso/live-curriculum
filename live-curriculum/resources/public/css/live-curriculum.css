@@ -1,0 +1,6 @@
+div { margin: 10px; }
+.contato { clear: both; }
+.conhecimentos div.left { float: left; }
+.conhecimentos div.right { float: left; }
+.conhecimentos div { border-width: 1px; border-style: solid;}
+.experiencia { clear: both; }
