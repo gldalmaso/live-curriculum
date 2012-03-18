@@ -26,11 +26,17 @@
 		'<label for="ck' + category + '">' + category + '</label></input>';
 	    $('#categorias').append(button).children().filter('input').last().bind('click', (function(category){
 		return function(){
-		    if ($('.' + category).filter('input[name="categorias"]').attr('checked')) {
-			$('.' + category).filter('div').toggleClass('ui-state-highlight', 500);
-		    } else {
-			$('.' + category).filter('div').toggleClass('ui-state-highlight', 500);
-		    }
+		    var buttons = $('input[name="categorias"]');
+		    var checked = buttons.filter('[checked="checked"]');
+		    var unchecked = buttons.not(checked);
+		    var toUncheckAnimate = _.reduce(unchecked, function(memo, button){
+			return memo.add($('.' + $(button).attr('id').replace('ck', '')).filter('.' + category));
+		    }, $());
+		    var toCheckAnimate = _.reduce(checked, function(memo, button){
+			return memo.add($('.' + $(button).attr('id').replace('ck','')).filter('.' + category));
+		    }, $());
+		    toUncheckAnimate.removeClass('toggled', 100);
+		    toCheckAnimate.effect('highlight', 500, function(){toCheckAnimate.addClass('toggled');});
 		};
 	    })(category));
 	    $('#ck' + category).button();

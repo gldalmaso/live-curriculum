@@ -15,8 +15,8 @@ li { list-style: none; }
 .conhecimentos div.right { float: left; }
 .column { width: 30%;}
 .conhecimentos div { text-align: center;}
-.untoggled { -moz-border-radius: 200px; border-radius: 200px; border: 1px solid #D9CC83;}
-.toggled { -moz-border-radius: 200px; border-radius: 200px; }
+.untoggled { -moz-border-radius: 200px; border-radius: 200px; border: 2px dashed #D9CC83; background-color: #ABBABA}
+.toggled { -moz-border-radius: 200px; border-radius: 200px; border: 2px solid #D9CC83; background-color: #D9BB73 }
 .categorias { width: 30% }
 #categorias { width: 90% }
 .experiencia { clear: both; }
