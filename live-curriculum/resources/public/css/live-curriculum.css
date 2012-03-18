@@ -1,6 +1,22 @@
+body { background-color:#ddcc88; font-size:16px; margin:0; padding:0; }
+
+#header{ background-color:#333333; height:150px; }
+
+#center { background-color:#eeeecc; min-height:650px; /* for modern browsers */ height:auto !important; /* for modern browsers */
+	  height:650px; /* for IE5.x and IE6 */
+	}
+
+#footer { clear:both; background-color:#333333; height:100px; }
+
 div { margin: 10px; }
+li { list-style: none; }
 .contato { clear: both; }
 .conhecimentos div.left { float: left; }
 .conhecimentos div.right { float: left; }
-.conhecimentos div { border-width: 1px; border-style: solid;}
+.column { width: 30%;}
+.conhecimentos div { text-align: center;}
+.untoggled { -moz-border-radius: 200px; border-radius: 200px; border: 1px solid #D9CC83;}
+.toggled { -moz-border-radius: 200px; border-radius: 200px; }
+.categorias { width: 30% }
+#categorias { width: 90% }
 .experiencia { clear: both; }
