@@ -35,8 +35,9 @@
 		    var toCheckAnimate = _.reduce(checked, function(memo, button){
 			return memo.add($('.' + $(button).attr('id').replace('ck','')).filter('.' + category));
 		    }, $());
-		    toUncheckAnimate.removeClass('toggled', 100);
-		    toCheckAnimate.effect('highlight', 500, function(){toCheckAnimate.addClass('toggled');});
+		    toUncheckAnimate.not(toCheckAnimate).removeClass('toggled', 500);
+		    toCheckAnimate.addClass('toggled');
+		    toCheckAnimate.effect('highlight', 500);
 		};
 	    })(category));
 	    $('#ck' + category).button();
